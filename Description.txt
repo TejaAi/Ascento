@@ -1,0 +1,32 @@
+To use this package first we have to install by pip cmd
+ pip install Ascento
+
+Later to import Funcions like Generating Unique Key,Droping Null Values, Encoding & Decoding data
+
+from TS import TsPython
+
+
+## Droping Null Values
+
+TsPython.DropNan(dataframe,"column_name")
+
+##  Label Encoding & Decoding
+ First Encode your Categorial Data, here One json file will Produce, save that file, for decoding purpose.
+
+
+ENCODING
+dic = TsPython.LabelEncode(dataframe)
+. Here "dic" is variable name , is used store the output of Encoding Data.
+
+DECODING:
+for i in dataframe.columns:
+    dataframe[i]= dataframe[i].apply(lambda x:TsPython.LabelDecode(dic,x,i))
+
+
+## Unique Key Generation
+KeyGen(dataframe,*args,key)
+dataframe = your dataframe name
+*args     = "column1","column2","column3"
+key       = Unique_Name , we want to assign
+
+

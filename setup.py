@@ -1,4 +1,5 @@
-from setuptools import setup 
+from setuptools import setup,find_packages
+import os
 
 # reading long description from file 
 with open('Description.txt') as file: 
@@ -23,11 +24,11 @@ setup(name='Ascento',
 	description='This Package helps to create unique key (foriegn key) and droping the different type of null values, encoding and decoding', 
 	long_description=long_description, 
 	url='https://github.com/TejaAi/Ascento', 
-	author='Teja', 
+	author='TejaSwaroop', 
 	author_email='teja136@hotmail.com', 
 	license='MIT', 
 	packages=['TS'], 
 	classifiers=CLASSIFIERS, 
 	install_requires=REQUIREMENTS, 
-	keywords='Ascento'
+	keywords=['Ascento','Unique_Key_Generator','NullValueDropper']
 	) 
